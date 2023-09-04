@@ -3,12 +3,17 @@ from utils import arrs
 
 class TestArrs(unittest.TestCase):
 
+ test/issue2
     def test_get_existing_index(self):
         # Проверяем, что функция возвращает элемент по указанному существующему индексу
         self.assertEqual(arrs.get([1, 2, 3], 1, "test"), 2)
 
     def test_get_default_value(self):
         # Проверяем, что функция возвращает значение по умолчанию, если индекс не существует
+
+    def test_get(self):
+        self.assertEqual(arrs.get([1, 2, 3], 1, "test"), 2)
+ develop
         self.assertEqual(arrs.get([], 0, "test"), "test")
 
         # Проверяем, что функция возвращает значение по умолчанию, если индекс меньше нуля
