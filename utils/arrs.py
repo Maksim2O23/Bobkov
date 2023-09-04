@@ -2,6 +2,9 @@
 
 
 def get(array, index, default=None):
+ test/issue2
+    if not array:  # Проверяем, что список не пустой
+
     """
     Извлекает из списка значение по указанному индексу, если индекс существует.
     Если индекс не существует, возвращает значение по умолчанию.
@@ -12,7 +15,12 @@ def get(array, index, default=None):
     :return: значение по индексу или значение по-умолчанию.
     """
     if index < 0 or not array:
+ develop
         return default
+    if 0 <= index < len(array):
+        return array[index]
+    return default
+
 
     return array[index]
 
